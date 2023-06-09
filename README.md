@@ -8,3 +8,4 @@
 6. add navbar js
 7. hero section html and css
 8. hero responsive
+9. modals html and css
