@@ -5,3 +5,4 @@
 3. add index.css
 4. logo move in assets folder
 5. navbar add responsive
+6. add navbar js
