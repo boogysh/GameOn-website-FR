@@ -11,3 +11,4 @@
 9. modals html and css
 10. hero img move to assets
 11. modals add responsive
+12. register.js open and close modals
