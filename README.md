@@ -12,3 +12,4 @@
 10. hero img move to assets
 11. modals add responsive
 12. register.js open and close modals
+13. register.js form, match inputs and sendForm
