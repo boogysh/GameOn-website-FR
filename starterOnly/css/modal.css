@@ -307,4 +307,76 @@ input {
   padding-left: 0;
   margin-top: 8px;
 }
-/* --------------------------- */
+/* ----------RESPONSIVE----------------- */
+@media screen and (max-width: 768px) {
+  .content,
+  .content_confirm {
+    width: 100%;
+    margin-top: 80px;
+    max-width: 479px;
+  }
+  .content_confirm {
+    height: calc(100vh - 80px);
+  }
+  label {
+    margin-bottom: 10px;
+    line-height: 130%;
+  }
+  .close {
+    width: 17px;
+    height: 17px;
+    top: 20px;
+    right: 20px;
+  }
+  .modal-body {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .text-control {
+    height: 50px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .checkbox-label,
+  .checkbox2-label {
+    margin-left: 25px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+  }
+  .checkbox-label:nth-of-type(4),
+  .checkbox-label:nth-of-type(5),
+  .checkbox-label:nth-of-type(6) {
+    margin-bottom: 3px;
+  }
+  .checkbox-label .checkbox-icon,
+  .checkbox2-label .checkbox-icon {
+    width: 20px;
+    height: 20px;
+    left: -25px;
+    top: 1px;
+  }
+  .checkbox-label .checkbox-icon::after,
+  .checkbox2-label .checkbox-icon::after {
+    width: 13px;
+    height: 13px;
+  }
+  .checkbox2-label .checkbox-icon::after {
+    width: 6px;
+    height: 3.5px;
+    left: 26%;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 479px) {
+  .content,
+  .content_confirm {
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 319px) {
+  label {
+    font-size: 13px;
+  }
+}
