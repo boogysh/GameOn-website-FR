@@ -1,0 +1,78 @@
+/* -----------------HERO SECTION----------------------------- */
+.hero-section {
+  /* min-height: 93vh; */
+  height: auto;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  overflow: hidden;
+  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 35px;
+}
+.hero-content {
+  padding: 56px 70px;
+  padding-bottom: 70px;
+  grid-column: span 4;
+  background: #232323;
+  color: #fff;
+  position: relative;
+  text-align: left;
+  min-width: 440px;
+}
+.hero-content::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #232323;
+  position: absolute;
+  right: -80px;
+  top: 0;
+}
+.hero-content > * {
+  position: relative;
+  z-index: 1;
+}
+.hero-headline {
+  font-size: 96px;
+  line-height: 125px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.hero-text {
+  width: 146%;
+  font-weight: normal;
+  margin-top: 73px;
+  padding: 0;
+}
+.btn-signup {
+  outline: none;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 18px 35px;
+  margin: 0;
+  margin-top: 73px;
+}
+
+.hero-img {
+  grid-column: span 8;
+  object-fit: cover;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  max-height: 657px;
+  height: 100%;
+}
+footer {
+  padding: 0 2.5%;
+}
+.copyrights {
+  color: #fe142f;
+  padding: 0;
+  font-size: 15px;
+  margin-top: 100px;
+  font-weight: bolder;
+}
+.hero-section > .btn-signup {
+  display: none;
+}

@@ -6,3 +6,4 @@
 4. logo move in assets folder
 5. navbar add responsive
 6. add navbar js
+7. hero section html and css
