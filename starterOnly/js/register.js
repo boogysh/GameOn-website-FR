@@ -55,8 +55,10 @@ const informedEvents = document.querySelector("#checkbox2");
 const emptyErrorMsg = "";
 const FN_ErrorMsg =
   "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
+const FN_advice_ErrorMsg = "Veuillez entrer que des majuscules et minuscules";
 const LN_ErrorMsg =
   "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
+const LN_advice_ErrorMsg = "Veuillez entrer que des majuscules et minuscules";
 const emailErrorMsg =
   "Le format de l'email est incorrect. Ex: exemple@domaine.com";
 const dateErrorMsg =
@@ -80,35 +82,41 @@ const delError = (errorId, errorMsg, inputId) => {
 // Match first name
 const matchFirstName = () => {
   const matched = FN.value.match(/^[a-z A-Z]{2,}$/);
-  if (matched) {
+  if (FN.value.length === 0 || matched) {
     data.firstName = FN.value;
     delError(errorFN, emptyErrorMsg, FN);
-  } else {
-    data.firstName = "";
+  } else if (FN.value.length === 1) {
     addError(errorFN, FN_ErrorMsg, FN);
+    data.firstName = "";
+  } else if (FN.value.length > 1 && !matched) {
+    addError(errorFN, FN_advice_ErrorMsg, FN);
+    data.firstName = "";
   }
 };
 
 // Match last name
 const matchLastName = () => {
   const matched = LN.value.match(/^[a-z A-Z]{2,}$/);
-  if (matched) {
+  if (LN.value.length === 0 || matched) {
     data.lastName = LN.value;
     delError(errorLN, emptyErrorMsg, LN);
-  } else {
-    data.lastName = null;
+  } else if (LN.value.length === 1) {
     addError(errorLN, LN_ErrorMsg, LN);
+    data.lastName = "";
+  } else if (LN.value.length > 1 && !matched) {
+    addError(errorLN, LN_advice_ErrorMsg, LN);
+    data.lastName = "";
   }
 };
 
 // Match email
 const matchEmail = () => {
   const matched = EMAIL.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-  if (matched) {
+  if (EMAIL.value.length === 0 || matched) {
     data.email = EMAIL.value;
     delError(errorEMAIL, emptyErrorMsg, EMAIL);
   } else {
-    data.email = null;
+    data.email = "";
     addError(errorEMAIL, emailErrorMsg, EMAIL);
   }
 };
@@ -116,11 +124,11 @@ const matchEmail = () => {
 // Match birth date
 const matchBirthDate = () => {
   const matched = DATE.value.match(/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/);
-  if (matched) {
+  if (DATE.value.length === 0 || matched) {
     data.birthDate = DATE.value;
     delError(errorDate, emptyErrorMsg, DATE);
   } else {
-    data.birthDate = null;
+    data.birthDate = "";
     addError(errorDate, dateErrorMsg, DATE);
   }
 };
@@ -130,7 +138,7 @@ const matchQtyTournments = () => {
   const val = QTY.value;
   const matched = val >= 0 && val < 100;
   if (matched) {
-    data.quantity = QTY.value;
+    data.quantity = parseInt(QTY.value);
     delError(errorQuantity, emptyErrorMsg, QTY);
   } else {
     addError(errorQuantity, qtyErrorMessage, QTY);
@@ -145,7 +153,7 @@ const checkedTournments = (e) => {
     data.tournments = val;
     delError(errorTournments, emptyErrorMsg);
   } else {
-    data.tournments = null;
+    data.tournments = "";
     addError(errorTournments, tournmentsErrorMsg);
   }
 };
@@ -192,12 +200,12 @@ TOURNMENTS.forEach((item) => item.addEventListener("input", checkedTournments));
 submitBtn.addEventListener("click", (e) => sendForm(e));
 //
 const data = {
-  firstName: null,
-  lastName: null,
-  email: null,
-  birthDate: null,
+  firstName: "",
+  lastName: "",
+  email: "",
+  birthDate: "",
   quantity: null,
-  tournments: null,
+  tournments: "",
   terms: true, //input has atribute checked
   informed: false,
 };
