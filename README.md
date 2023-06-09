@@ -18,3 +18,4 @@
 16. clean commented and unnecessary code
 17. html add events for modals
 18. form -> move events into html inputs
+19. hero section => div to section
