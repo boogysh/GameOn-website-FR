@@ -179,14 +179,14 @@ function resetAllInputs() {
 }
 
 //events
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); // launch modal event
-FN.addEventListener("input", matchFirstName);
-LN.addEventListener("input", matchLastName);
-EMAIL.addEventListener("input", matchEmail);
-DATE.addEventListener("input", matchBirthDate);
-QTY.addEventListener("input", matchQtyTournments);
-TERMS.addEventListener("input", checkedTerms);
-informedEvents.addEventListener("input", checkedEvents);
+// modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); // launch modal event
+// FN.addEventListener("input", matchFirstName);
+// LN.addEventListener("input", matchLastName);
+// EMAIL.addEventListener("input", matchEmail);
+// DATE.addEventListener("input", matchBirthDate);
+// QTY.addEventListener("input", matchQtyTournments);
+// TERMS.addEventListener("input", checkedTerms);
+// informedEvents.addEventListener("input", checkedEvents);
 //
 TOURNMENTS.forEach((item) => item.addEventListener("input", checkedTournments));
 submitBtn.addEventListener("click", (e) => sendForm(e));
