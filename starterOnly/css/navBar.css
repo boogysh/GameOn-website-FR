@@ -65,3 +65,86 @@
 h1 {
   font-size: 96px;
 }
+
+@media all and (max-width: 1279px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .topnav a {
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    padding: 7px 9px;
+  }
+
+  .logo {
+    width: 190px;
+    height: auto;
+    display: flex;
+    margin: 7px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo {
+    margin-right: auto;
+    width: 100%;
+  }
+  .main-navbar {
+    float: initial;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    display: none;
+  }
+  .main-navbar.show {
+    display: flex;
+  }
+
+  .topnav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .topnav a {
+    text-align: left;
+  }
+  .icon {
+    display: flex;
+    top: 8px;
+  }
+  .logo {
+    width: 150px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .logo {
+    width: 120px;
+    margin-left: 0;
+  }
+}
+
+main {
+  font-size: 130%;
+  font-weight: bolder;
+  color: black;
+  padding-top: 0.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-radius: 2rem;
+  text-align: justify;
+}
+
+.footer {
+  margin: 20px;
+  padding: 10px;
+  font-family: var(--font-slab);
+}
