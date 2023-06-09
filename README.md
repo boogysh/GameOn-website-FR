@@ -14,3 +14,4 @@
 12. register.js open and close modals
 13. register.js form, match inputs and sendForm
 14. add css confirmation
+15. fix font-weight-500
