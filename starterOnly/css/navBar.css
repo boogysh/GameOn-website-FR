@@ -1,0 +1,67 @@
+.logo {
+  padding-right: 1rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  margin-left: 6%;
+  margin-right: 2.5%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.header-logo {
+  float: left;
+}
+
+.main-navbar {
+  display: flex;
+  float: right;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  margin: 5px;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 9px 12px;
+}
+
+.topnav a:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+.topnav a.active {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+.icon {
+  display: none;
+  padding-right: 0 !important;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.fa-bars:before {
+  font-size: 23px;
+  color: #ff0000;
+}
+
+h1 {
+  font-size: 96px;
+}
