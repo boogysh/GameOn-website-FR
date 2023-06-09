@@ -1,6 +1,5 @@
 /* -----------------HERO SECTION----------------------------- */
 .hero-section {
-  /* min-height: 93vh; */
   height: auto;
   border-radius: 10px;
   display: grid;
@@ -168,7 +167,6 @@ footer {
     display: none;
   }
   .hero-headline {
-    /* padding-top: 28px; */
     font-size: 3rem;
     font-size: 51px;
     line-height: 64px;

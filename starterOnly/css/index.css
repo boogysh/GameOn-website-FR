@@ -1,42 +1,40 @@
 :root {
-    --font-default: "DM Sans", Arial, Helvetica, sans-serif;
-    --font-slab: var(--font-default);
-    --modal-duration: 0.8s;
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    background-image: url("background.png");
-    font-family: var(--font-default);
-    font-size: 18px;
-    max-width: 1460px;
-    margin: 0 auto;
-    height: auto;
-  }
-  main {
-    padding: 0 !important;
-    margin: 0 6%;
-  }
-  
-  p {
-    margin-bottom: 0;
-    padding: 0.5vw;
-  }
-  button {
-    display: block;
-    background: #fe142f;
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 18px;
-    cursor: pointer;
-    border: 0;
-    color: #fff;
-    /* padding: 12px 60px; */
-  }
-  
+  --font-default: "DM Sans", Arial, Helvetica, sans-serif;
+  --font-slab: var(--font-default);
+  --modal-duration: 0.8s;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url("background.png");
+  font-family: var(--font-default);
+  font-size: 18px;
+  max-width: 1460px;
+  margin: 0 auto;
+  height: auto;
+}
+main {
+  padding: 0 !important;
+  margin: 0 6%;
+}
+
+p {
+  margin-bottom: 0;
+  padding: 0.5vw;
+}
+button {
+  display: block;
+  background: #fe142f;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+}
