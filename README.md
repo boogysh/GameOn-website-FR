@@ -7,3 +7,4 @@
 5. navbar add responsive
 6. add navbar js
 7. hero section html and css
+8. hero responsive
