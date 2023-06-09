@@ -41,13 +41,13 @@
           Vous aimez jouer ? Notre prochain évènement gaming est ouvert
           aux réservations... Places limitées !
         </p>
-        <button class="btn-signup modal-btn">
+        <button onclick="launchModal()" class="btn-signup modal-btn">
           je m'inscris
         </button>
       </div>
       <img class="hero-img" src="./assets/bg_img.jpg" alt="img" />
       <!-- displayed-in-responsive-mobile -->
-      <button class="btn-signup modal-btn">
+      <button onclick="launchModal()" class="btn-signup modal-btn">
         je m'inscris
       </button>
     </div>
@@ -143,9 +143,9 @@
     <!-- modalConfirmation -->
     <div class="bground_confirm">
       <div class="content_confirm">
-        <span class="close"></span>
+        <span onclick="closeModalConfirm()" class="close"></span>
         <h1 class="h1-confirm">Merci pour<br>votre inscription</h1>
-        <button class="btn-close-confirmation">
+        <button onclick="closeModalConfirm()" class="btn-close-confirmation">
           Fermer
         </button>
       </div>

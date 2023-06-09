@@ -16,3 +16,4 @@
 14. add css confirmation
 15. fix font-weight-500; en => fr
 16. clean commented and unnecessary code
+17. html add events for modals
