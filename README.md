@@ -9,3 +9,4 @@
 7. hero section html and css
 8. hero responsive
 9. modals html and css
+10. hero img move to assets
