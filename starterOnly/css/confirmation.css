@@ -1,4 +1,4 @@
-.h1-confirm {
+.h2-confirm {
   font-size: 36px;
   font-weight: 400;
   line-height: 142%;
@@ -10,13 +10,20 @@
 .btn-close-confirmation {
   background: #fe142f;
   display: flex;
-  font-size: 1rem;
+  font-size: 18px;
   margin-bottom: 18px;
 
   border-radius: 7px;
-  padding: 12px 82px;
+  /* padding: 12px 82px; */
+  padding: 11px 62px;
   color: #fff;
   cursor: pointer;
   border: 0;
   z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .btn-close-confirmation {
+    padding: 6px 48px;
+    font-size: 14px;
+  }
 }

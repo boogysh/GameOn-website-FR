@@ -206,7 +206,7 @@ const data = {
   birthDate: "",
   quantity: null,
   tournments: "",
-  terms: true, //input has atribute checked
+  terms: true, 
   informed: false,
 };
 

@@ -74,13 +74,13 @@ h1 {
   font-size: 96px;
 }
 
-@media all and (max-width: 1279px) {
+@media screen and (max-width: 1279px) {
   h1 {
     font-size: 70px;
   }
 }
 
-@media all and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .topnav a {
     font-size: 14px;
     letter-spacing: -0.2px;
