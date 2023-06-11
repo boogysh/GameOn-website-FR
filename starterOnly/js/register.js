@@ -25,7 +25,7 @@ function closeModalConfirm() {
   modalBgConfirm.style.display = "none";
   localStorage.removeItem("register");
   resetAllInputs();
-  // window.location.reload();
+  window.location.reload();
 }
 
 //----- REGISTER FORM-----------
@@ -186,6 +186,20 @@ function resetAllInputs() {
   });
 }
 
+// request post
+
+const registerUser = async () => {
+  const response = await fetch(`http://localhost:4444/register`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  const registeredUser = await response.json();
+  console.log("registeredUser", registeredUser);
+};
+
 //events
 // modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); // launch modal event
 // FN.addEventListener("input", matchFirstName);
@@ -206,11 +220,11 @@ const data = {
   birthDate: "",
   quantity: null,
   tournments: "",
-  terms: true, 
+  terms: true,
   informed: false,
 };
 
-function sendForm(e) {
+async function sendForm(e) {
   e.preventDefault();
   if (
     data.firstName &&
@@ -221,8 +235,8 @@ function sendForm(e) {
     data.tournments &&
     data.terms
   ) {
+    await registerUser();
     modalBg.style.display = "none"; // a part of closeModal();
-    localStorage.setItem("register", JSON.stringify(data));
     launchModalConfirm();
   } else {
     !data.firstName && addError(errorFN, FN_ErrorMsg, FN);
@@ -231,6 +245,5 @@ function sendForm(e) {
     !data.birthDate && addError(errorDate, dateErrorMsg, DATE);
     !data.quantity && addError(errorQuantity, qtyErrorMessage, QTY);
     !data.tournments && addError(errorTournments, tournmentsErrorMsg);
-    localStorage.removeItem("register");
   }
 }

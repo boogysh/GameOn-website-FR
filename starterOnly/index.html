@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Reservation</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/navBar.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/confirmation.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -55,7 +55,8 @@
       <div class="content">
         <span onclick="closeModal()" class="close"></span>
         <div class="modal-body">
-          <form name="reserve" action="index.html" method="get" id="registerForm">
+          <!-- <form name="reserve" action="index.html" method="post" id="registerForm"> -->
+          <form id="registerForm" method="post">
             <!-- first name -->
             <div class="formData">
               <label for="first">Prénom</label>
@@ -65,19 +66,19 @@
             <!-- last name -->
             <div class="formData">
               <label for="last">Nom</label>
-              <input oninput="matchLastName()" class="text-control" data-error type="text" id="last" name="last" >
+              <input oninput="matchLastName()" class="text-control" data-error type="text" id="last" name="last">
               <span id="errorLast" class="error "></span>
             </div>
             <!-- email -->
             <div class="formData">
               <label for="email">E-mail</label><br>
-              <input oninput="matchEmail()" class="text-control" type="email" id="email" name="email" >
+              <input oninput="matchEmail()" class="text-control" type="email" id="email" name="email">
               <span id="errorEmail" class="error "></span>
             </div>
             <!-- birthdate -->
             <div class="formData">
               <label for="birthdate">Date de naissance</label>
-              <input oninput="matchBirthDate()" class="text-control" id="birthdate" name="birthdate" >
+              <input oninput="matchBirthDate()" class="text-control" id="birthdate" name="birthdate">
               <span id="errorBirthDate" class="error "></span>
             </div>
             <!-- tournments quantity -->
@@ -90,27 +91,27 @@
             <!-- tournments list -->
             <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
             <div class="formData">
-              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" >
+              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York">
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
                 New York</label>
-              <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco" >
+              <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco">
               <label class="checkbox-label" for="location2">
                 <span class="checkbox-icon"></span>
                 San Francisco</label>
-              <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" >
+              <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle">
               <label class="checkbox-label" for="location3">
                 <span class="checkbox-icon"></span>
                 Seattle</label>
-              <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" >
+              <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago">
               <label class="checkbox-label" for="location4">
                 <span class="checkbox-icon"></span>
                 Chicago</label>
-              <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" >
+              <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston">
               <label class="checkbox-label" for="location5">
                 <span class="checkbox-icon"></span>
                 Boston</label>
-              <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland" >
+              <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland">
               <label class="checkbox-label" for="location6">
                 <span class="checkbox-icon"></span>
                 Portland</label>
@@ -118,13 +119,13 @@
             </div>
             <div class="formData">
               <!-- terms -->
-              <input oninput="checkedTerms()" class="checkbox-input" type="checkbox" id="checkbox1" checked >
+              <input oninput="checkedTerms()" class="checkbox-input" type="checkbox" id="checkbox1" checked>
               <label class="checkbox2-label" for="checkbox1">
                 <span class="checkbox-icon"></span>
                 J'ai lu et accepté les conditions d'utilisation.
               </label>
               <!-- rest informed -->
-              <input oninput="checkedEvents()" class="checkbox-input" type="checkbox" id="checkbox2" >
+              <input oninput="checkedEvents()" class="checkbox-input" type="checkbox" id="checkbox2">
               <label class="checkbox2-label" for="checkbox2">
                 <span class="checkbox-icon"></span>
                 Je souhaite être prévenu des prochains évènements.
