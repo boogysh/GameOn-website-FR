@@ -189,7 +189,9 @@ function resetAllInputs() {
 // request post
 
 const registerUser = async () => {
-  const response = await fetch(`http://localhost:4444/register`, {
+  // const urlServer = "http://localhost:4444"
+  const urlServer = "https://game-on-boogysh.vercel.app";
+  const response = await fetch(`${urlServer}/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
