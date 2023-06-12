@@ -2,7 +2,7 @@
 
 ## Projet 4 - GameOn
 
-#### Conditions du projet :
+### Conditions du projet :
 
 1. Travailler sur un repo GitHub forké <br>
 2. Utiliser des fichiers séparés pour le HTML, CSS, et Javascript <br>
@@ -14,6 +14,7 @@
 #### 1. Fermer la modale.
 
 A. Utilisation de: "display = none" pour fermer la modale. <br>
+
 #### 2. Tester l’interface dans Chrome et Firefox, mobile et desktop
 
 A. Tester l’interface dans les dernières versions Chrome et Firefox, mobile et desktop. <br>
@@ -27,7 +28,7 @@ C. Tester les valeurs correctes et incorrectes <br>
 #### 5. Les entrées
 
 A. Lier les labels aux entrées dans le HTML en utilisant les attributs "for" et "id" dans le code existant <br>
-B. Utiliser du JavaScript pur pour terminer le formulaire  <br>
+B. Utiliser du JavaScript pur pour terminer le formulaire <br>
 C. Le formulaire doit être valide quand l'utilisateur clique sur « Submit » <br>
 
 #### 6. Les données
