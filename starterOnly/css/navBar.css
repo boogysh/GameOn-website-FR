@@ -1,10 +1,11 @@
+/* logo navBar */
 .logo {
   padding-right: 1rem;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-
+/* navBar */
 .topnav {
   position: relative;
   overflow: hidden;
@@ -13,15 +14,16 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+/* logo wrapper */
 .header-logo {
   float: left;
 }
-
+/* items nav wrapper */
 .main-navbar {
   display: flex;
   float: right;
 }
-
+/* item nav */
 .topnav a {
   float: left;
   display: block;
@@ -47,14 +49,14 @@
   border-radius: 8px;
   border-bottom: solid 2px #fff;
 }
-.topnav a::after{
-  content: '';
+.topnav a::after {
+  content: "";
   display: block;
   width: 100%;
   height: 1px;
   background-color: #fff;
 }
-
+/* burger menu in responsive */
 .icon {
   display: none;
   padding-right: 0 !important;
@@ -64,14 +66,10 @@
   top: 0;
   right: 0;
 }
-
+/* bars-size of burger-menu */
 .fa-bars:before {
   font-size: 23px;
   color: #ff0000;
-}
-
-h1 {
-  font-size: 96px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -95,7 +93,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-logo {
     margin-right: auto;
     width: 100%;

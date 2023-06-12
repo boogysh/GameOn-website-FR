@@ -1,4 +1,5 @@
 /* -----------------HERO SECTION----------------------------- */
+/* section */
 .hero-section {
   height: auto;
   border-radius: 10px;
@@ -8,6 +9,7 @@
   box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
   margin-top: 35px;
 }
+/* content */
 .hero-content {
   padding: 56px 70px;
   padding-bottom: 70px;
@@ -31,18 +33,21 @@
   position: relative;
   z-index: 1;
 }
+/* h1 title */
 .hero-headline {
   font-size: 96px;
   line-height: 125px;
   font-weight: 500;
   white-space: nowrap;
 }
+/* description */
 .hero-text {
   width: 146%;
   font-weight: normal;
   margin-top: 73px;
   padding: 0;
 }
+/* register button */
 .btn-signup {
   outline: none;
   text-transform: capitalize;
@@ -52,7 +57,7 @@
   margin: 0;
   margin-top: 73px;
 }
-
+/* image */
 .hero-img {
   grid-column: span 8;
   object-fit: cover;
@@ -62,17 +67,9 @@
   max-height: 657px;
   height: 100%;
 }
-footer {
-  padding: 0 2.5%;
-}
-.copyrights {
-  color: #fe142f;
-  padding: 0;
-  font-size: 15px;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  font-weight: bolder;
-}
+
+
+/* second register button */
 .hero-section > .btn-signup {
   display: none;
 }
@@ -101,9 +98,7 @@ footer {
   font-size: 1.2rem;
   padding: 12px 20px;
 }
-.copyrights {
-  margin-top: 80px;
-}
+
 
 @media screen and (max-width: 1023px) {
   .hero-section {
@@ -134,12 +129,10 @@ footer {
     padding: 10px 16px;
     margin-top: 60px;
   }
-  .copyrights {
-    margin-top: 70px;
-  }
+  
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   main {
     margin: 0 5%;
   }
@@ -196,12 +189,7 @@ footer {
     padding: 12px 35px;
     font-size: 14px;
   }
-  .copyrights {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 12px;
-  }
+  
 }
 @media screen and (max-width: 479px) {
   .hero-content {
@@ -223,11 +211,7 @@ footer {
     font-size: 13px;
     line-height: 17px;
   }
-  .copyrights {
-    font-size: 10px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+  
 }
 
 @media screen and (max-width: 319px) {
@@ -245,10 +229,7 @@ footer {
     padding: 10px 30px;
     font-size: 12px;
   }
-  .copyrights {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+  
 }
 
 @keyframes modalopen {
