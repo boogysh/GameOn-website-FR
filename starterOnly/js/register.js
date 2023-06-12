@@ -70,27 +70,27 @@ const termsErrorMsg =
 
 //add error
 const addError = (errorId, errorMsg, inputId) => {
-  errorId.textContent = errorMsg;
   inputId && inputId.classList.add("border-error");
+  return (errorId.textContent = errorMsg);
 };
 //del error
 const delError = (errorId, errorMsg, inputId) => {
-  errorId.textContent = errorMsg;
   inputId && inputId.classList.remove("border-error");
+  return (errorId.textContent = errorMsg);
 };
 
 // Match first name
 const matchFirstName = () => {
   const matched = FN.value.match(/^[a-z A-Z]{2,}$/);
   if (FN.value.length === 0 || matched) {
-    data.firstName = FN.value;
     delError(errorFN, emptyErrorMsg, FN);
+    return (data.firstName = FN.value);
   } else if (FN.value.length === 1) {
     addError(errorFN, FN_ErrorMsg, FN);
-    data.firstName = "";
+    return (data.firstName = "");
   } else if (FN.value.length > 1 && !matched) {
     addError(errorFN, FN_advice_ErrorMsg, FN);
-    data.firstName = "";
+    return (data.firstName = "");
   }
 };
 
@@ -98,14 +98,14 @@ const matchFirstName = () => {
 const matchLastName = () => {
   const matched = LN.value.match(/^[a-z A-Z]{2,}$/);
   if (LN.value.length === 0 || matched) {
-    data.lastName = LN.value;
     delError(errorLN, emptyErrorMsg, LN);
+    return (data.lastName = LN.value);
   } else if (LN.value.length === 1) {
     addError(errorLN, LN_ErrorMsg, LN);
-    data.lastName = "";
+    return (data.lastName = "");
   } else if (LN.value.length > 1 && !matched) {
     addError(errorLN, LN_advice_ErrorMsg, LN);
-    data.lastName = "";
+    return (data.lastName = "");
   }
 };
 
@@ -113,11 +113,11 @@ const matchLastName = () => {
 const matchEmail = () => {
   const matched = EMAIL.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
   if (EMAIL.value.length === 0 || matched) {
-    data.email = EMAIL.value;
     delError(errorEMAIL, emptyErrorMsg, EMAIL);
+    return (data.email = EMAIL.value);
   } else {
-    data.email = "";
     addError(errorEMAIL, emailErrorMsg, EMAIL);
+    return (data.email = "");
   }
 };
 
@@ -125,11 +125,11 @@ const matchEmail = () => {
 const matchBirthDate = () => {
   const matched = DATE.value.match(/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/);
   if (DATE.value.length === 0 || matched) {
-    data.birthDate = DATE.value;
     delError(errorDate, emptyErrorMsg, DATE);
+    return (data.birthDate = DATE.value);
   } else {
-    data.birthDate = "";
     addError(errorDate, dateErrorMsg, DATE);
+    return (data.birthDate = "");
   }
 };
 
@@ -138,11 +138,11 @@ const matchQtyTournments = () => {
   const val = QTY.value;
   const matched = val >= 0 && val < 100;
   if (matched) {
-    data.quantity = parseInt(QTY.value);
     delError(errorQuantity, emptyErrorMsg, QTY);
+    return (data.quantity = parseInt(QTY.value));
   } else {
     addError(errorQuantity, qtyErrorMessage, QTY);
-    data.quantity = null;
+    return (data.quantity = null);
   }
 };
 
@@ -150,11 +150,11 @@ const matchQtyTournments = () => {
 const checkedTournments = (e) => {
   const val = e.target.value;
   if (val) {
-    data.tournments = val;
     delError(errorTournments, emptyErrorMsg);
+    return (data.tournments = val);
   } else {
-    data.tournments = "";
     addError(errorTournments, tournmentsErrorMsg);
+    return (data.tournments = "");
   }
 };
 
@@ -162,11 +162,11 @@ const checkedTournments = (e) => {
 const checkedTerms = () => {
   const val = TERMS.checked;
   if (val) {
-    data.terms = val;
     delError(errorTerms, emptyErrorMsg);
+    return (data.terms = val);
   } else {
-    data.terms = false;
     addError(errorTerms, termsErrorMsg);
+    return (data.terms = false);
   }
 };
 // informed
