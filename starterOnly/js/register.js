@@ -3,7 +3,6 @@
 // DOM Elements modals
 const modalBg = document.querySelector(".bground");
 const modalBgConfirm = document.querySelector(".bground_confirm");
-
 // launch modal form
 function launchModal() {
   modalBg.style.display = "block";
@@ -16,12 +15,10 @@ function closeModal() {
   resetAllInputs();
   window.location.reload();
 }
-
 // launch modal confirmation
 function launchModalConfirm() {
   modalBgConfirm.style.display = "flex";
 }
-
 // close modal confirmation
 function closeModalConfirm() {
   modalBgConfirm.style.display = "none";
@@ -213,7 +210,6 @@ submitBtn.addEventListener("click", (e) => sendForm(e));
 
 async function sendForm(e) {
   e.preventDefault();
-
   const data = {
     firstName: localStorage.getItem("firstName"),
     lastName: localStorage.getItem("lastName"),
@@ -224,9 +220,8 @@ async function sendForm(e) {
     terms: localStorage.getItem("terms"),
     informed: localStorage.getItem("informed"),
   };
+  // save data to local storage 
   localStorage.setItem("data", JSON.stringify(data));
-  console.log("data", data);
-
   if (
     data.firstName &&
     data.lastName &&
