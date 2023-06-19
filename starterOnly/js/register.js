@@ -12,8 +12,6 @@ function launchModal() {
 // close modal form
 function closeModal() {
   modalBg.style.display = "none";
-  resetAllInputs();
-  window.location.reload();
 }
 // launch modal confirmation
 function launchModalConfirm() {
@@ -220,7 +218,7 @@ async function sendForm(e) {
     terms: localStorage.getItem("terms"),
     informed: localStorage.getItem("informed"),
   };
-  // save data to local storage 
+  // save data to local storage
   localStorage.setItem("data", JSON.stringify(data));
   if (
     data.firstName &&
@@ -233,9 +231,8 @@ async function sendForm(e) {
   ) {
     await registerUser();
     localStorage.clear();
-    // a part of closeModal();
-    modalBg.style.display = "none";
-    //
+    resetAllInputs();
+    closeModal();
     launchModalConfirm();
   } else {
     !data.firstName && matchFirstName();
